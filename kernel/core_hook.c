@@ -1174,6 +1174,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 		return 0;
 	}
 #endif // #ifdef CONFIG_KSU_SUSFS_SUS_SU
+#define CMD_SUSFS_ADD_SUS_MAP 0x60020
 #ifdef CONFIG_KSU_SUSFS_SUS_MAP
 	if (arg2 == CMD_SUSFS_ADD_SUS_MAP) {
 		susfs_cmd_err = susfs_add_sus_map((struct st_susfs_sus_map __user*)arg3);
